@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Skylet IRL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Quicksand:400,500|Roboto:300,400,500'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css'>
+
+<style>
+body {
+color: #462967;
+font-family: 'Roboto', sans-serif;
+}
+
+#root {
+padding-bottom: 40px;
+background-color: #fff;
+}
+
+.container {
+overflow: visible;
+}
+
+a:focus, button:focus {
+outline: none !important;
+}
+
+.control-label {
+padding: 0 !important;
+text-align: left !important;
+}
+
+.form-control {
+font-size: 16px;
+font-weight: 300;
+border-radius: 0;
+height: 40px;
+-webkit-appearance: none;
+box-shadow: none !important;
+color: #999;
+}
+
+select.form-control {
+background-image: url(https://cdn.rawgit.com/allenpc/skylet-irl-assets/4984befc/dropdownarrow.png);
+background-repeat: no-repeat;
+background-position: right 10px center;
+}
+
+img.logo {
+display: block;
+margin: 0 auto;
+padding-bottom: 20px;
+width: 250px;
+}
+
+.inspire-me img {
+width: 60px;
+display: inline;
+margin-bottom: 5px;
+}
+
+.inspire-me {
+text-align: right;
+}
+
+.jobs {
+background-color: #f5f5f5;
+padding: 5px 10px;
+}
+
+.jobs .job-values {
+font-size: 16px;
+color: #999;
+font-weight: 300;
+}
+
+.select-one {
+font-weight: 300;
+font-size: 14px;
+color: #999;
+}
+
+.btn-custom {
+background-color: #37c2d2;
+border-color: #37c2d2;
+color: #fff;
+}
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active {
+background-color: #2cb4c4;
+border-color: #27a1af;
+color: #fff;
+}
+.btn-custom.disabled:hover,
+.btn-custom.disabled:focus,
+.btn-custom.disabled:active,
+.btn-custom.disabled.active,
+.btn-custom[disabled]:hover,
+.btn-custom[disabled]:focus,
+.btn-custom[disabled]:active,
+.btn-custom[disabled].active,
+fieldset[disabled] .btn-custom:hover,
+fieldset[disabled] .btn-custom:focus,
+fieldset[disabled] .btn-custom:active,
+fieldset[disabled] .btn-custom.active {
+background-color: #37c2d2;
+border-color: #37c2d2;
+}
+
+label {
+margin: 0;
+font-size: 16px;
+font-weight: 500;
+}
+
+.nopad {
+margin-bottom: 5px;
+}
+
+.message {
+font-size: 20px;
+}
+
+.intro {
+font-size: 16px;
+text-align: center;
+margin-bottom: 30px;
+font-weight: 500;
+}
+
+.first-intro {
+background-image: url(https://cdn.rawgit.com/allenpc/skylet-irl-assets/12b2acbd/girlheader.png);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center bottom;
+padding: 50px 0;
+margin: 0 -15px 20px -15px;
+}
+
+.header {
+padding: 20px;
+text-align: center;
+}
+
+.header img {
+width: 150px;
+display: inline-block;
+}
+
+.purple {
+background-color: #462967;
+color: #fff;
+margin: 0 -15px 20px -15px;
+text-align: center;
+font-size: 18px;
+padding: 30px 0;
+}
+
+.purple .recap {
+font-size: 24px;
+padding: 0 30px;
+font-family: Quicksand;
+font-weight: 500;
+}
+
+.purple .cash {
+width: 120px;
+display: inline-block;
+padding: 20px;
+}
+
+.purple .amount {
+font-weight: 300;
+}
+
+.purple-header {
+color: #462967;
+padding: 10px;
+font-size: 24px;
+text-align: center;
+font-family: Quicksand;
+}
+
+.purple .score {
+font-size: 60px;
+background-image: url(https://cdn.rawgit.com/allenpc/skylet-irl-assets/4984befc/Circlescoreiconv2.png);
+background-size: 110px;
+background-position: center;
+background-repeat: no-repeat;
+height: 140px;
+padding-top: 26px;
+}
+
+.email-msg {
+color: #999;
+font-size: 18px;
+text-align: center;
+font-weight: 300;
+margin-bottom: 20px;
+}
+
+.first-intro img {
+width: 180px;
+display: inline-block;
+margin-bottom: 10px;
+}
+
+.first-intro .big {
+font-size: 28px;
+padding: 0 40px;
+font-weight: 300;
+font-family: Quicksand;
+}
+
+.get-irl {
+margin-top: 20px;
+text-align: center;
+}
+
+.get-irl > button, .get-irl > a {
+font-size: 20px;
+width: 100%;
+}
+
+.page {
+margin-right: 40px;
+}
+
+@media (min-width: 600px) {
+body {
+background-color: #5E378A;
+}
+
+#root {
+margin: 30px auto;
+width: 400px;
+padding-bottom: 20px;
+border-radius: 6px;
+box-shadow: 0 0 35px 6px rgba(0, 0, 0, 0.4);
+overflow: hidden;
+perspective: 1px;
+}
+}
+</style>
+
+
+
+
+
+</head>
+
+<body translate="no" >
+
+                      <div>
+  <div id="root"></div>
+</div>
+<!-- start Mixpanel --><script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+mixpanel.init("ed0d46f9f0d8271427f648888b6e17d0");</script><!-- end Mixpanel -->
+<script>
+  mixpanel.track('page view');
+</script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react-bootstrap/0.30.7/react-bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.0/numeral.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js'></script>
+<script src='https://cdn.rawgit.com/allenpc/2abc1fc0c0b0be331d9eeb8e6ca02593/raw/b8c3dd0e6d1f2a4d756583c1d7f2d13211c47bd6/react-slick.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/qs/6.4.0/qs.min.js'></script>
+
+<script>
+"use strict";
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var cities = [{
+"region": "San Francisco, CA",
+"cost": 64700
+}, {
+"region": "San Jose, CA",
+"cost": 64200
+}, {
+"region": "New York, NY",
+"cost": 60670
+}, {
+"region": "Santa Maria-Santa Barbara, CA",
+"cost": 59700
+}, {
+"region": "Santa Cruz, CA",
+"cost": 58925
+}, {
+"region": "Los Angeles-Long Beach-Anaheim, CA",
+"cost": 58650
+}, {
+"region": "Boston, MA",
+"cost": 57700
+}, {
+"region": "San Diego, CA",
+"cost": 56200
+}, {
+"region": "Stamford, CT",
+"cost": 56175
+}, {
+"region": "Santa Rosa, CA",
+"cost": 51650
+}, {
+"region": "Urban Honolulu, HI",
+"cost": 50700
+}, {
+"region": "Ventura, CA",
+"cost": 50260
+}, {
+"region": "Salinas, CA",
+"cost": 49700
+}, {
+"region": "Washington, DC",
+"cost": 49200
+}, {
+"region": "Miami-Fort Lauderdale, FL",
+"cost": 48700
+}, {
+"region": "Seattle, WA",
+"cost": 48700
+}, {
+"region": "Trenton, NJ",
+"cost": 47200
+}, {
+"region": "Boulder, CO",
+"cost": 47200
+}, {
+"region": "Denver, CO",
+"cost": 47100
+}, {
+"region": "Vallejo, CA",
+"cost": 46750
+}, {
+"region": "Chicago, IL",
+"cost": 46650
+}, {
+"region": "United States",
+"cost": 46540
+}, {
+"region": "Burlington, VT",
+"cost": 46025
+}, {
+"region": "Williston, ND",
+"cost": 45750
+}, {
+"region": "North Port-Sarasota-Bradenton, FL",
+"cost": 45700
+}, {
+"region": "Portland, OR",
+"cost": 45650
+}, {
+"region": "Portland, ME",
+"cost": 45200
+}, {
+"region": "Dallas-Fort Worth, TX",
+"cost": 44700
+}, {
+"region": "Charleston, SC",
+"cost": 44700
+}, {
+"region": "Ann Arbor, MI",
+"cost": 44700
+}, {
+"region": "Kingston, NY",
+"cost": 44700
+}, {
+"region": "Philadelphia, PA",
+"cost": 44690
+}, {
+"region": "Houston, TX",
+"cost": 44645
+}, {
+"region": "Nashville, TN",
+"cost": 44450
+}, {
+"region": "Minneapolis-St Paul, MN",
+"cost": 44200
+}, {
+"region": "Port St. Lucie, FL",
+"cost": 44075
+}, {
+"region": "Riverside, CA",
+"cost": 43950
+}, {
+"region": "Baltimore, MD",
+"cost": 43950
+}, {
+"region": "Providence, RI",
+"cost": 43950
+}, {
+"region": "New Orleans, LA",
+"cost": 43950
+}, {
+"region": "Austin, TX",
+"cost": 43900
+}, {
+"region": "Charlotte, NC",
+"cost": 43450
+}, {
+"region": "Hartford, CT",
+"cost": 43450
+}, {
+"region": "Manchester, NH",
+"cost": 43390
+}, {
+"region": "Sacramento, CA",
+"cost": 43360
+}, {
+"region": "Fort Collins, CO",
+"cost": 43320
+}, {
+"region": "New Haven, CT",
+"cost": 43300
+}, {
+"region": "Fort Myers, FL",
+"cost": 43270
+}, {
+"region": "Orlando, FL",
+"cost": 43200
+}, {
+"region": "Madison, WI",
+"cost": 43200
+}, {
+"region": "Corpus Christi, TX",
+"cost": 43200
+}, {
+"region": "Claremont, NH",
+"cost": 43200
+}, {
+"region": "Fairbanks, AK",
+"cost": 43200
+}, {
+"region": "Hilton Head Island, SC",
+"cost": 43155
+}, {
+"region": "Bremerton, WA",
+"cost": 42980
+}, {
+"region": "Raleigh, NC",
+"cost": 42970
+}, {
+"region": "Atlantic City, NJ",
+"cost": 42950
+}, {
+"region": "Worcester, MA",
+"cost": 42700
+}, {
+"region": "Anchorage, AK",
+"cost": 42700
+}, {
+"region": "New London, CT",
+"cost": 42700
+}, {
+"region": "Albany, NY",
+"cost": 42695
+}, {
+"region": "California-Lexington Park, MD",
+"cost": 42650
+}, {
+"region": "Durham, NC",
+"cost": 42470
+}, {
+"region": "Tampa, FL",
+"cost": 42400
+}, {
+"region": "Olympia, WA",
+"cost": 42200
+}, {
+"region": "Charlottesville, VA",
+"cost": 42145
+}, {
+"region": "Bloomington, IN",
+"cost": 42075
+}, {
+"region": "Detroit, MI",
+"cost": 41700
+}, {
+"region": "Allentown, PA",
+"cost": 41700
+}, {
+"region": "Daytona Beach, FL",
+"cost": 41700
+}, {
+"region": "Torrington, CT",
+"cost": 41700
+}, {
+"region": "Oak Harbor, WA",
+"cost": 41700
+}, {
+"region": "Springfield, MA",
+"cost": 41650
+}, {
+"region": "Phoenix, AZ",
+"cost": 41450
+}, {
+"region": "Reno, NV",
+"cost": 41450
+}, {
+"region": "East Stroudsburg, PA",
+"cost": 41330
+}, {
+"region": "San Antonio, TX",
+"cost": 41280
+}, {
+"region": "Provo, UT",
+"cost": 41250
+}, {
+"region": "Melbourne, FL",
+"cost": 41200
+}, {
+"region": "Daphne, AL",
+"cost": 41200
+}, {
+"region": "Morehead City, NC",
+"cost": 40950
+}, {
+"region": "Jacksonville, FL",
+"cost": 40890
+}, {
+"region": "Las Vegas, NV",
+"cost": 40700
+}, {
+"region": "Virginia Beach, VA",
+"cost": 40700
+}, {
+"region": "Richmond, VA",
+"cost": 40700
+}, {
+"region": "Colorado Springs, CO",
+"cost": 40700
+}, {
+"region": "Savannah, GA",
+"cost": 40700
+}, {
+"region": "Panama City, FL",
+"cost": 40700
+}, {
+"region": "Wilmington, NC",
+"cost": 40675
+}, {
+"region": "St. Cloud, MN",
+"cost": 40675
+}, {
+"region": "Salt Lake City, UT",
+"cost": 40650
+}, {
+"region": "Midland, TX",
+"cost": 40650
+}, {
+"region": "Stockton, CA",
+"cost": 40550
+}, {
+"region": "Grand Rapids, MI",
+"cost": 40450
+}, {
+"region": "Des Moines, IA",
+"cost": 40360
+}, {
+"region": "Pittsburgh, PA",
+"cost": 40200
+}, {
+"region": "Milwaukee, WI",
+"cost": 40200
+}, {
+"region": "Buffalo, NY",
+"cost": 40200
+}, {
+"region": "Omaha, NE",
+"cost": 40200
+}, {
+"region": "Syracuse, NY",
+"cost": 40200
+}, {
+"region": "Modesto, CA",
+"cost": 40200
+}, {
+"region": "Asheville, NC",
+"cost": 40200
+}, {
+"region": "Greenville, SC",
+"cost": 40160
+}, {
+"region": "Louisville-Jefferson County, KY",
+"cost": 40125
+}, {
+"region": "Columbus, OH",
+"cost": 40100
+}, {
+"region": "Lincoln, NE",
+"cost": 40100
+}, {
+"region": "Harrisburg, PA",
+"cost": 40050
+}, {
+"region": "Rochester, NY",
+"cost": 39950
+}, {
+"region": "Lancaster, PA",
+"cost": 39950
+}, {
+"region": "Myrtle Beach, SC",
+"cost": 39950
+}, {
+"region": "Salisbury, MD",
+"cost": 39950
+}, {
+"region": "Corvallis, OR",
+"cost": 39950
+}, {
+"region": "Chico, CA",
+"cost": 39800
+}, {
+"region": "Cleveland, OH",
+"cost": 39700
+}, {
+"region": "Kansas City, MO",
+"cost": 39700
+}, {
+"region": "Reading, PA",
+"cost": 39700
+}, {
+"region": "Iowa City, IA",
+"cost": 39700
+}, {
+"region": "Bismarck, ND",
+"cost": 39700
+}, {
+"region": "Crestview-Fort Walton Beach-Destin, FL",
+"cost": 39675
+}, {
+"region": "Gainesville, FL",
+"cost": 39575
+}, {
+"region": "St. Louis, MO",
+"cost": 39450
+}, {
+"region": "Cincinnati, OH",
+"cost": 39450
+}, {
+"region": "Knoxville, TN",
+"cost": 39450
+}, {
+"region": "Lakeland, FL",
+"cost": 39450
+}, {
+"region": "Ogden, UT",
+"cost": 39450
+}, {
+"region": "Prescott, AZ",
+"cost": 39450
+}, {
+"region": "Albuquerque, NM",
+"cost": 39400
+}, {
+"region": "Indianapolis, IN",
+"cost": 39300
+}, {
+"region": "Columbia, SC",
+"cost": 39200
+}, {
+"region": "Salem, OR",
+"cost": 39200
+}, {
+"region": "Eugene, OR",
+"cost": 39200
+}, {
+"region": "Grand Junction, CO",
+"cost": 39200
+}, {
+"region": "Harrisonburg, VA",
+"cost": 39200
+}, {
+"region": "Spokane, WA",
+"cost": 39150
+}, {
+"region": "Sioux Falls, SD",
+"cost": 39150
+}, {
+"region": "Duluth, MN",
+"cost": 39050
+}, {
+"region": "Akron, OH",
+"cost": 39000
+}, {
+"region": "Oklahoma City, OK",
+"cost": 38950
+}, {
+"region": "Jackson, MS",
+"cost": 38950
+}, {
+"region": "Roanoke, VA",
+"cost": 38950
+}, {
+"region": "Casper, WY",
+"cost": 38950
+}, {
+"region": "Missoula, MT",
+"cost": 38900
+}, {
+"region": "Lexington, KY",
+"cost": 38850
+}, {
+"region": "Montgomery, AL",
+"cost": 38825
+}, {
+"region": "Scranton, PA",
+"cost": 38800
+}, {
+"region": "Chattanooga, TN",
+"cost": 38800
+}, {
+"region": "Birmingham, AL",
+"cost": 38700
+}, {
+"region": "Bakersfield, CA",
+"cost": 38700
+}, {
+"region": "Pensacola, FL",
+"cost": 38700
+}, {
+"region": "Visalia, CA",
+"cost": 38700
+}, {
+"region": "Ocala, FL",
+"cost": 38700
+}, {
+"region": "Hagerstown, MD",
+"cost": 38700
+}, {
+"region": "Morgantown, WV",
+"cost": 38700
+}, {
+"region": "Tyler, TX",
+"cost": 38670
+}, {
+"region": "El Paso, TX",
+"cost": 38650
+}, {
+"region": "Augusta, GA",
+"cost": 38650
+}, {
+"region": "Amarillo, TX",
+"cost": 38650
+}, {
+"region": "Binghamton, NY",
+"cost": 38650
+}, {
+"region": "Manhattan, KS",
+"cost": 38650
+}, {
+"region": "Billings, MT",
+"cost": 38580
+}, {
+"region": "Redding, CA",
+"cost": 38550
+}, {
+"region": "York, PA",
+"cost": 38500
+}, {
+"region": "Memphis, TN",
+"cost": 38450
+}, {
+"region": "Fresno, CA",
+"cost": 38450
+}, {
+"region": "Winston-Salem, NC",
+"cost": 38450
+}, {
+"region": "Boise City, ID",
+"cost": 38450
+}, {
+"region": "Yakima, WA",
+"cost": 38450
+}, {
+"region": "Davenport, IL",
+"cost": 38375
+}, {
+"region": "Abilene, TX",
+"cost": 38300
+}, {
+"region": "Hattiesburg, MS",
+"cost": 38250
+}, {
+"region": "Greensboro, NC",
+"cost": 38205
+}, {
+"region": "Brownsville, TX",
+"cost": 38200
+}, {
+"region": "Peoria, IL",
+"cost": 38200
+}, {
+"region": "Gulfport, MS",
+"cost": 38200
+}, {
+"region": "Tallahassee, FL",
+"cost": 38200
+}, {
+"region": "Athens, GA",
+"cost": 38200
+}, {
+"region": "Grand Forks, MN",
+"cost": 38200
+}, {
+"region": "Junction City, KS",
+"cost": 38200
+}, {
+"region": "Champaign-Urbana, IL",
+"cost": 38170
+}, {
+"region": "Lawrence, KS",
+"cost": 38120
+}, {
+"region": "Tucson, AZ",
+"cost": 38050
+}, {
+"region": "Beaumont, TX",
+"cost": 38000
+}, {
+"region": "McAllen, TX",
+"cost": 37950
+}, {
+"region": "Fayetteville, AR",
+"cost": 37950
+}, {
+"region": "South Bend, IN",
+"cost": 37950
+}, {
+"region": "Lubbock, TX",
+"cost": 37950
+}, {
+"region": "Fargo, ND",
+"cost": 37950
+}, {
+"region": "Lafayette-West Lafayette, IN",
+"cost": 37950
+}, {
+"region": "Cheyenne, WY",
+"cost": 37950
+}, {
+"region": "Little Rock, AR",
+"cost": 37700
+}, {
+"region": "Wichita, KS",
+"cost": 37700
+}, {
+"region": "Lansing, MI",
+"cost": 37700
+}, {
+"region": "Rockford, IL",
+"cost": 37700
+}, {
+"region": "Kalamazoo, MI",
+"cost": 37700
+}, {
+"region": "New Bern, NC",
+"cost": 37700
+}, {
+"region": "Hinesville, GA",
+"cost": 37700
+}, {
+"region": "Dayton, OH",
+"cost": 37650
+}, {
+"region": "Lynchburg, VA",
+"cost": 37650
+}, {
+"region": "Johnson City, TN",
+"cost": 37650
+}, {
+"region": "Mobile, AL",
+"cost": 37550
+}, {
+"region": "Fort Leonard Wood, MO",
+"cost": 37550
+}, {
+"region": "Fayetteville, NC",
+"cost": 37450
+}, {
+"region": "Topeka, KS",
+"cost": 37450
+}, {
+"region": "Carbondale, IL",
+"cost": 37450
+}, {
+"region": "Greenville, NC",
+"cost": 37425
+}, {
+"region": "Eau Claire, WI",
+"cost": 37350
+}, {
+"region": "Toledo, OH",
+"cost": 37200
+}, {
+"region": "Huntington, WV",
+"cost": 37200
+}, {
+"region": "Clarksville, TN",
+"cost": 37200
+}, {
+"region": "Cedar Rapids, IA",
+"cost": 37200
+}, {
+"region": "Jacksonville, NC",
+"cost": 37200
+}, {
+"region": "Evansville, IN",
+"cost": 37000
+}, {
+"region": "Canton, OH",
+"cost": 36950
+}, {
+"region": "Wichita Falls, TX",
+"cost": 36950
+}, {
+"region": "Pocatello, ID",
+"cost": 36950
+}, {
+"region": "Lawton, OK",
+"cost": 36825
+}, {
+"region": "Sierra Vista, AZ",
+"cost": 36700
+}, {
+"region": "Las Cruces, NM",
+"cost": 36650
+}, {
+"region": "Rolla, MO",
+"cost": 36650
+}, {
+"region": "Columbus, GA",
+"cost": 36580
+}, {
+"region": "Valdosta, GA",
+"cost": 36550
+}, {
+"region": "Killeen, TX",
+"cost": 36475
+}, {
+"region": "Columbia, MO",
+"cost": 36450
+}, {
+"region": "Fort Wayne, IN",
+"cost": 36350
+}, {
+"region": "Youngstown, OH",
+"cost": 36330
+}, {
+"region": "Elizabethtown, KY",
+"cost": 36325
+}, {
+"region": "Bloomington, IL",
+"cost": 36250
+}, {
+"region": "Springfield, MO",
+"cost": 36200
+}, {
+"region": "Flint, MI",
+"cost": 36200
+}];
+
+var jobs = [{
+"field": "Accounting",
+"salary": 52000,
+"jobs": " Accountant, Auditor, Financial Analyst"
+}, {
+"field": "Advertising",
+"salary": 45000,
+"jobs": " Account Executive, Marketing Analyst, Media Planner"
+}, {
+"field": "Anthropology",
+"salary": 43000,
+"jobs": " Project Coordinator, Research Assistant, Administrative Assistant  "
+}, {
+"field": "Architecture",
+"salary": 50000,
+"jobs": " Architect, CAD Designer, Project Designer "
+}, {
+"field": "Biochemistry",
+"salary": 42672,
+"jobs": " Research Technician, Pharmacy Technician, Chemist"
+}, {
+"field": "Biology",
+"salary": 41250,
+"jobs": " Lab Assistant, Paramedic, Tutor"
+}, {
+"field": "Biomedical Engineering",
+"salary": 52814,
+"jobs": " Biomedical Engineer, Service Engineer, Clinical Research Associate "
+}, {
+"field": "Biotechnology",
+"salary": 50000,
+"jobs": " Laboratory Technician, Quality Control Analyst, Research Associate"
+}, {
+"field": "Business",
+"salary": 47850,
+"jobs": " Account Manager, Marketing Manager, Market Research Analyst "
+}, {
+"field": "Chemical Engineering",
+"salary": 65000,
+"jobs": " Chemical Engineer, Process Engineer, Project Engineer"
+}, {
+"field": "Chemistry",
+"salary": 44000,
+"jobs": " Pharmacy Technician, Chemist, Laboratory Technician"
+}, {
+"field": "Civil Engineering",
+"salary": 61500,
+"jobs": " Civil Engineer, Structural Engineer, Field Engineer "
+}, {
+"field": "Communications",
+"salary": 44190,
+"jobs": " Public Relations Coordinator, Journalist, Content Marketing Manager"
+}, {
+"field": "Computer Science",
+"salary": 70000,
+"jobs": " Software Engineer, Systems Engineer, Web Developer"
+}, {
+"field": "Economics",
+"salary": 52000,
+"jobs": " Financial Analyst, Management Analyst, Accountant"
+}, {
+"field": "Education",
+"salary": 43000,
+"jobs": " Special Education Teacher, Elementary School Teacher, Language Arts Teacher"
+}, {
+"field": "Electrical Engineering",
+"salary": 68438,
+"jobs": " Electrical Engineer, Systems Engineer, Software Developer"
+}, {
+"field": "English",
+"salary": 45000,
+"jobs": " English Teacher, Editor, Copywriter"
+}, {
+"field": "Environmental Science",
+"salary": 45000,
+"jobs": " Environmental Scientist, Laboratory Technician, Safety Manager "
+}, {
+"field": "Fashion Design",
+"salary": 50000,
+"jobs": " Fashion Designer, Textile Designer, Stylist "
+}, {
+"field": "Film Studies",
+"salary": 44000,
+"jobs": " Production Coordinator, Video Editor, Proposal Manager"
+}, {
+"field": "Finance",
+"salary": 54900,
+"jobs": " Financial Analyst, Investment Banking Analyst, Accountant "
+}, {
+"field": "Graphic Design",
+"salary": 45846,
+"jobs": " Graphic Designer, Web Designer, Art Manager"
+}, {
+"field": "Healthcare Administration",
+"salary": 42000,
+"jobs": " Medical Assistant, File Clerk, Office Manager"
+}, {
+"field": "History",
+"salary": 45000,
+"jobs": " Research Assistant, History Teacher, Teaching Assistant "
+}, {
+"field": "Hospitality Management  ",
+"salary": 42734,
+"jobs": " Food and Beverage Manager, Front Desk Manager, Housekeeping Manager"
+}, {
+"field": "Human Resources",
+"salary": 45000,
+"jobs": " HR Coordinator, Corporate Recruiter, HR Analyst "
+}, {
+"field": "Industrial Engineering",
+"salary": 64381,
+"jobs": " Industrial Engineer, Quality Engineer, Production Planner"
+}, {
+"field": "Information Technology",
+"salary": 64008,
+"jobs": " Programmer Analyst, Technical Support, Systems Engineer"
+}, {
+"field": "Interior Design",
+"salary": 44098,
+"jobs": " Interior Designer, Visual Merchandiser, Drafter"
+}, {
+"field": "International Relations",
+"salary": 45880,
+"jobs": " Marketing Associate, English Teacher, Research Assistant"
+}, {
+"field": "Journalism",
+"salary": 45000,
+"jobs": " Reporter, Editor, Public Relations Coordinator "
+}, {
+"field": "Liberal Arts",
+"salary": 42500,
+"jobs": " Sales Manager, Receptionist, Teacher"
+}, {
+"field": "Management Information Systems",
+"salary": 58000,
+"jobs": " Network Administrator, Help Desk Analyst, Business Analyst"
+}, {
+"field": "Marketing",
+"salary": 45475,
+"jobs": " Marketing Coordinator, Account Executive, Marketing Analyst  "
+}, {
+"field": "Mathematics",
+"salary": 54018,
+"jobs": " Math Teacher, Software Engineer, Data Analyst"
+}, {
+"field": "Mechanical Engineering",
+"salary": 68000,
+"jobs": " Mechanical Engineer, Design Engineer, Project Engineer"
+}, {
+"field": "Music",
+"salary": 44000,
+"jobs": " Music Teacher, Audio Engineer, Media Sales"
+}, {
+"field": "Nursing",
+"salary": 58928,
+"jobs": " Registered Nurse, Licensed Vocational Nurse, Case Manager"
+}, {
+"field": "Philosophy",
+"salary": 45000,
+"jobs": " Teaching Assistant, Writer, Consultant  "
+}, {
+"field": "Physics",
+"salary": 50000,
+"jobs": " Physicist, Research Fellow, Computer Programmer"
+}, {
+"field": "Political Science",
+"salary": 45000,
+"jobs": " Law Clerk, Paralegal, Consultant  "
+}, {
+"field": "Psychology",
+"salary": 42000,
+"jobs": " Case Manager, Mental Health Counselor, Sales Associate"
+}, {
+"field": "Public Relations",
+"salary": 43156,
+"jobs": " Public Relations Coordinator, Account Executive, Event Planner"
+}, {
+"field": "Social Science",
+"salary": 45000,
+"jobs": " HR Assistant, Management Consultant, Visual Merchandiser"
+}, {
+"field": "Social Work",
+"salary": 41656,
+"jobs": " Social Worker, Mental Health Counselor, Camp Counselor "
+}, {
+"field": "Sociology",
+"salary": 42000,
+"jobs": " HR Assistant, Account Manager, Administrative Assistant  "
+}, {
+"field": "Spanish",
+"salary": 44256,
+"jobs": " Spanish Teacher, Spanish Translator, Project Manager"
+}, {
+"field": "Sports Management",
+"salary": 43156,
+"jobs": " Personal Trainer, Sales Associate, Production Assistant  "
+}, {
+"field": "Statistics",
+"salary": 60000,
+"jobs": " Data Analyst, Statistician, Data Scientist "
+}];
+
+var Form = ReactBootstrap.Form;
+var FormGroup = ReactBootstrap.FormGroup;
+var FormControl = ReactBootstrap.FormControl;
+var Row = ReactBootstrap.Row;
+var Col = ReactBootstrap.Col;
+var ControlLabel = ReactBootstrap.ControlLabel;
+var InputGroup = ReactBootstrap.InputGroup;
+var Button = ReactBootstrap.Button;
+
+var INTEREST_RATE = 0.01;
+
+var StudentDebt = function (_React$PureComponent) {
+_inherits(StudentDebt, _React$PureComponent);
+
+function StudentDebt(props) {
+_classCallCheck(this, StudentDebt);
+
+var _this = _possibleConstructorReturn(this, _React$PureComponent.call(this, props));
+
+_this.changeDebt = function (e) {
+  _this.setState({ debt: parseInt(e.target.value) || 0 });
+};
+
+_this.changeJob = function (e) {
+  _this.setState({ job: parseInt(e.target.value) });
+};
+
+_this.changeEmail = function (e) {
+  var email = e.target.value.trim();
+  _this.setState({ email: email, emailValid: email && _this.refs.email.checkValidity() });
+};
+
+_this.randomJob = function (e) {
+  var j = Math.floor(Math.random() * _this.props.jobs.length);
+  _this.setState({ job: j });
+  e.preventDefault();
+};
+
+_this.changeCity = function (e) {
+  _this.setState({ city: parseInt(e.target.value) });
+};
+
+_this.randomCity = function (e) {
+  var c = Math.floor(Math.random() * _this.props.cities.length);
+  _this.setState({ city: c });
+  e.preventDefault();
+};
+
+_this.getIrl = function () {
+  return Math.min(Math.floor(_this.props.jobs[_this.state.job].salary / (_this.state.debt / 10 + _this.getEffectiveCol()) * 10), 10);
+};
+
+_this.getEffectiveCol = function () {
+  return _this.props.cities[_this.state.city].cost + _this.state.debt * INTEREST_RATE * 12;
+};
+
+_this.goIrl = function () {
+  _this.refs.slider.slickGoTo(1);
+};
+
+_this.submitEmail = function (e) {
+  e.preventDefault();
+  _this.refs.slider.slickGoTo(2);
+  _this.refs.email.blur();
+
+  // Send to Mixpanel
+  var params = {
+    email: _this.refs.email.value,
+    irl: _this.getIrl(),
+    job: _this.props.jobs[_this.state.job].field,
+    city: _this.props.cities[_this.state.city].region,
+    debt: _this.state.debt,
+    effectiveCol: _this.getEffectiveCol(),
+    referrer: Qs.parse(location.search.substring(1)).ref || null
+  };
+  mixpanel.track("submission", params);
+};
+
+_this.afterChange = function (p) {
+  _this.setState({ pageNum: p });
+  window.scrollTo(0, 0);
+};
+
+_this.getMessage = function () {
+  var irl = _this.getIrl();
+  if (irl > 9) {
+    return "GO GIRLFRIEND! 🙌";
+  } else if (irl > 7) {
+    return "ALMOST READY 4 RL...";
+  } else if (irl > 6) {
+    return "GETTING CLOSE...";
+  } else if (irl > 3) {
+    return "UMM...LET'S TALK";
+  } else if (irl > 1) {
+    return "WE NEED TO TALK, ASAP!";
+  } else {
+    return "IT'S OK, WE CAN HELP YOU!";
+  }
+};
+
+_this.getSecondaryMessage = function () {
+  var irl = _this.getIrl();
+  if (irl > 9) {
+    return "You are so ready for RL, but want to be 100% ready?";
+  } else if (irl > 6) {
+    return "Want help on how to improve your score?";
+  } else if (irl > 3) {
+    return "We know you can do better, let us help you!";
+  } else {
+    return "Girlfriend, we are here for you 💁🏻";
+  }
+};
+
+_this.state = {
+  job: 0,
+  city: 0,
+  debt: 0,
+  pageNum: 0,
+  emailValid: false
+};
+return _this;
+}
+
+StudentDebt.prototype.render = function render() {
+var _this2 = this;
+
+return React.createElement(
+  "div",
+  null,
+  React.createElement(
+    Slider,
+    { ref: "slider", afterChange: this.afterChange, arrows: false, swipe: false, infinite: false },
+    React.createElement(
+      "div",
+      { className: "container" },
+      React.createElement(
+        "div",
+        { className: "intro first-intro" },
+        React.createElement("img", { src: "https://cdn.rawgit.com/allenpc/skylet-irl-assets/12b2acbd/SKYLETIRLLOGO.png" }),
+        React.createElement(
+          "p",
+          { className: "big" },
+          "Think you know what real life is like?"
+        ),
+        React.createElement(
+          "p",
+          null,
+          "Get your IRL score today!"
+        )
+      ),
+      React.createElement(
+        Form,
+        { horizontal: true },
+        React.createElement(
+          FormGroup,
+          { className: "nopad" },
+          React.createElement(
+            Col,
+            { xs: 12 },
+            React.createElement(
+              ControlLabel,
+              null,
+              "Total student loan debt"
+            )
+          )
+        ),
+        React.createElement(
+          FormGroup,
+          null,
+          React.createElement(
+            Col,
+            { xs: 12 },
+            React.createElement(FormControl, { pattern: "\\d*", onChange: this.changeDebt, tabIndex: this.state.pageNum === 0 ? 0 : -1, placeholder: "Enter $ Amount" })
+          )
+        ),
+        React.createElement(
+          FormGroup,
+          { className: "nopad" },
+          React.createElement(
+            Col,
+            { xs: 8 },
+            React.createElement(
+              ControlLabel,
+              null,
+              React.createElement(
+                "div",
+                null,
+                "What job areas interest you?"
+              ),
+              React.createElement(
+                "div",
+                { className: "select-one" },
+                "(select one or select inspire me)"
+              )
+            )
+          ),
+          React.createElement(
+            Col,
+            { xs: 4, className: "inspire-me" },
+            React.createElement(
+              "a",
+              { href: "#", onClick: this.randomJob, tabIndex: this.state.pageNum === 0 ? 0 : -1 },
+              React.createElement("img", { src: "https://cdn.rawgit.com/allenpc/skylet-irl-assets/12b2acbd/Inspire_me_icon.png" })
+            )
+          )
+        ),
+        React.createElement(
+          FormGroup,
+          null,
+          React.createElement(
+            Col,
+            { xs: 12 },
+            React.createElement(
+              FormControl,
+              { componentClass: "select", onChange: this.changeJob, tabIndex: this.state.pageNum === 0 ? 0 : -1 },
+              this.props.jobs.map(function (job, i) {
+                return React.createElement(
+                  "option",
+                  { value: i, selected: i == _this2.state.job },
+                  job.field
+                );
+              })
+            ),
+            React.createElement(
+              "div",
+              { className: "jobs" },
+              React.createElement(
+                "div",
+                { className: "you-could-have" },
+                "Jobs you could have..."
+              ),
+              React.createElement(
+                "div",
+                { className: "job-values" },
+                this.props.jobs[this.state.job].jobs
+              )
+            )
+          )
+        ),
+        React.createElement(
+          FormGroup,
+          { className: "nopad" },
+          React.createElement(
+            Col,
+            { xs: 8 },
+            React.createElement(
+              ControlLabel,
+              null,
+              "Where do you want to live?"
+            )
+          ),
+          React.createElement(
+            Col,
+            { xs: 4, className: "inspire-me" },
+            React.createElement(
+              "a",
+              { href: "#", onClick: this.randomCity, tabIndex: this.state.pageNum === 0 ? 0 : -1 },
+              React.createElement("img", { src: "https://cdn.rawgit.com/allenpc/skylet-irl-assets/12b2acbd/Inspire_me_icon.png" })
+            )
+          )
+        ),
+        React.createElement(
+          FormGroup,
+          null,
+          React.createElement(
+            Col,
+            { xs: 12 },
+            React.createElement(
+              FormControl,
+              { componentClass: "select", onChange: this.changeCity, tabIndex: this.state.pageNum === 0 ? 0 : -1 },
+              this.props.cities.map(function (city, i) {
+                return React.createElement(
+                  "option",
+                  { value: i, selected: i == _this2.state.city },
+                  city.region
+                );
+              })
+            )
+          )
+        ),
+        React.createElement(
+          "div",
+          { className: "get-irl" },
+          React.createElement(
+            Button,
+            { bsStyle: "custom", onClick: this.goIrl, tabIndex: this.state.pageNum === 0 ? 0 : -1 },
+            "Get my IRL score!"
+          )
+        )
+      )
+    ),
+    React.createElement(
+      "div",
+      { className: "container" },
+      React.createElement(
+        "div",
+        { className: "header" },
+        React.createElement("img", { src: "https://cdn.rawgit.com/allenpc/skylet-irl-assets/12b2acbd/SKYLETIRLLOGO.png" })
+      ),
+      React.createElement(
+        "div",
+        { className: "purple" },
+        React.createElement(
+          "div",
+          { className: "recap" },
+          this.props.jobs[this.state.job].field,
+          " + living in ",
+          this.props.cities[this.state.city].region
+        ),
+        React.createElement("img", { className: "cash", src: "https://cdn.rawgit.com/allenpc/skylet-irl-assets/59014499/Screen2icon.png" }),
+        React.createElement(
+          "p",
+          null,
+          "Starting Salary ",
+          React.createElement(
+            "span",
+            { className: "amount" },
+            numeral(this.props.jobs[this.state.job].salary).format('$0,0')
+          )
+        ),
+        React.createElement(
+          "p",
+          null,
+          "Cost of Living ",
+          React.createElement(
+            "span",
+            { className: "amount" },
+            numeral(this.getEffectiveCol()).format('$0,0')
+          )
+        )
+      ),
+      React.createElement(
+        Form,
+        { horizontal: true, onSubmit: this.submitEmail, onBeforeUnload: null },
+        React.createElement(
+          "div",
+          { className: "purple-header" },
+          "Get awesome ideas on how to live a cool real life!"
+        ),
+        React.createElement(
+          "p",
+          { className: "email-msg" },
+          "Enter your email for your IRL Score & to get access to cool stuff"
+        ),
+        React.createElement(
+          FormGroup,
+          null,
+          React.createElement(
+            Col,
+            { xs: 12 },
+            React.createElement("input", { className: "form-control", type: "email", placeholder: "Email Address", onChange: this.changeEmail, ref: "email", tabIndex: this.state.pageNum === 1 ? 0 : -1 })
+          )
+        ),
+        React.createElement(
+          "div",
+          { className: "get-irl" },
+          React.createElement(
+            Button,
+            { bsStyle: "custom", type: "submit", disabled: !this.state.emailValid, tabIndex: this.state.pageNum === 1 ? 0 : -1 },
+            "Ok, gimme my IRL score"
+          )
+        )
+      )
+    ),
+    React.createElement(
+      "div",
+      { className: "container" },
+      React.createElement(
+        "div",
+        { className: "header" },
+        React.createElement("img", { src: "https://cdn.rawgit.com/allenpc/skylet-irl-assets/12b2acbd/SKYLETIRLLOGO.png" })
+      ),
+      React.createElement(
+        "div",
+        { className: "purple" },
+        React.createElement(
+          "div",
+          { className: "recap" },
+          "Your IRL score out of a possible 10 is..."
+        ),
+        React.createElement(
+          "div",
+          { className: "score" },
+          this.getIrl()
+        ),
+        React.createElement(
+          "div",
+          { className: "message" },
+          this.getMessage()
+        )
+      ),
+      React.createElement(
+        "div",
+        { className: "purple-header" },
+        this.getSecondaryMessage()
+      ),
+      React.createElement(
+        "div",
+        { className: "get-irl" },
+        React.createElement(
+          Button,
+          { bsStyle: "custom", tabIndex: this.state.pageNum === 2 ? 0 : -1, href: "http://www.getskylet.com/join-us.html", target: "_blank" },
+          "Join Skylet Campus Today!"
+        )
+      )
+    )
+  )
+);
+};
+
+return StudentDebt;
+}(React.PureComponent);
+
+ReactDOM.render(React.createElement(StudentDebt, {
+jobs: jobs,
+cities: cities
+}), document.getElementById('root'));
+</script>
+
+
+
+
+</body>
+</html>
