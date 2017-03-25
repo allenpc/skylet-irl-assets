@@ -235,6 +235,16 @@ width: 100%;
 margin-right: 40px;
 }
 
+.how {
+text-align: center;
+margin-top: 30px;
+font-size: 16px;
+}
+
+.how a {
+color: #37c2d2;
+}
+
 @media (min-width: 600px) {
 body {
 background-color: #5E378A;
@@ -260,18 +270,18 @@ perspective: 1px;
 
 <body translate="no" >
 
-                      <div>
-  <div id="root"></div>
+                <div>
+<div id="root"></div>
 </div>
 <!-- start Mixpanel --><script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
 0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
 for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
 mixpanel.init("ed0d46f9f0d8271427f648888b6e17d0");</script><!-- end Mixpanel -->
 <script>
-  mixpanel.track('page view');
+mixpanel.track('page view');
 </script>
 
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/react-bootstrap/0.30.7/react-bootstrap.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.0/numeral.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js'></script>
@@ -1198,105 +1208,105 @@ _classCallCheck(this, StudentDebt);
 var _this = _possibleConstructorReturn(this, _React$PureComponent.call(this, props));
 
 _this.changeDebt = function (e) {
-  _this.setState({ debt: parseInt(e.target.value) || 0 });
+_this.setState({ debt: parseInt(e.target.value) || 0 });
 };
 
 _this.changeJob = function (e) {
-  _this.setState({ job: parseInt(e.target.value) });
+_this.setState({ job: parseInt(e.target.value) });
 };
 
 _this.changeEmail = function (e) {
-  var email = e.target.value.trim();
-  _this.setState({ email: email, emailValid: email && _this.refs.email.checkValidity() });
+var email = e.target.value.trim();
+_this.setState({ email: email, emailValid: email && _this.refs.email.checkValidity() });
 };
 
 _this.randomJob = function (e) {
-  var j = Math.floor(Math.random() * _this.props.jobs.length);
-  _this.setState({ job: j });
-  e.preventDefault();
+var j = Math.floor(Math.random() * _this.props.jobs.length);
+_this.setState({ job: j });
+e.preventDefault();
 };
 
 _this.changeCity = function (e) {
-  _this.setState({ city: parseInt(e.target.value) });
+_this.setState({ city: parseInt(e.target.value) });
 };
 
 _this.randomCity = function (e) {
-  var c = Math.floor(Math.random() * _this.props.cities.length);
-  _this.setState({ city: c });
-  e.preventDefault();
+var c = Math.floor(Math.random() * _this.props.cities.length);
+_this.setState({ city: c });
+e.preventDefault();
 };
 
 _this.getIrl = function () {
-  return Math.min(Math.floor(_this.props.jobs[_this.state.job].salary / (_this.state.debt / 10 + _this.getEffectiveCol()) * 10), 10);
+return Math.min(Math.floor(_this.props.jobs[_this.state.job].salary / (_this.state.debt / 10 + _this.getEffectiveCol()) * 10), 10);
 };
 
 _this.getEffectiveCol = function () {
-  return _this.props.cities[_this.state.city].cost + _this.state.debt * INTEREST_RATE * 12;
+return _this.props.cities[_this.state.city].cost + _this.state.debt * INTEREST_RATE * 12;
 };
 
 _this.goIrl = function () {
-  _this.refs.slider.slickGoTo(1);
+_this.refs.slider.slickGoTo(1);
 };
 
 _this.submitEmail = function (e) {
-  e.preventDefault();
-  _this.refs.slider.slickGoTo(2);
-  _this.refs.email.blur();
+e.preventDefault();
+_this.refs.slider.slickGoTo(2);
+_this.refs.email.blur();
 
-  // Send to Mixpanel
-  var params = {
-    email: _this.refs.email.value,
-    irl: _this.getIrl(),
-    job: _this.props.jobs[_this.state.job].field,
-    city: _this.props.cities[_this.state.city].region,
-    debt: _this.state.debt,
-    effectiveCol: _this.getEffectiveCol(),
-    referrer: Qs.parse(location.search.substring(1)).ref || null
-  };
-  mixpanel.track("submission", params);
+// Send to Mixpanel
+var params = {
+  email: _this.refs.email.value,
+  irl: _this.getIrl(),
+  job: _this.props.jobs[_this.state.job].field,
+  city: _this.props.cities[_this.state.city].region,
+  debt: _this.state.debt,
+  effectiveCol: _this.getEffectiveCol(),
+  referrer: Qs.parse(location.search.substring(1)).ref || null
+};
+mixpanel.track("submission", params);
 };
 
 _this.afterChange = function (p) {
-  _this.setState({ pageNum: p });
-  window.scrollTo(0, 0);
+_this.setState({ pageNum: p });
+window.scrollTo(0, 0);
 };
 
 _this.getMessage = function () {
-  var irl = _this.getIrl();
-  if (irl > 9) {
-    return "GO GIRLFRIEND! 🙌";
-  } else if (irl > 7) {
-    return "ALMOST READY 4 RL...";
-  } else if (irl > 6) {
-    return "GETTING CLOSE...";
-  } else if (irl > 3) {
-    return "UMM...LET'S TALK";
-  } else if (irl > 1) {
-    return "WE NEED TO TALK, ASAP!";
-  } else {
-    return "IT'S OK, WE CAN HELP YOU!";
-  }
+var irl = _this.getIrl();
+if (irl > 9) {
+  return "GO GIRLFRIEND! 🙌";
+} else if (irl > 7) {
+  return "ALMOST READY 4 RL...";
+} else if (irl > 6) {
+  return "GETTING CLOSE...";
+} else if (irl > 3) {
+  return "UMM...LET'S TALK";
+} else if (irl > 1) {
+  return "WE NEED TO TALK, ASAP!";
+} else {
+  return "IT'S OK, WE CAN HELP YOU!";
+}
 };
 
 _this.getSecondaryMessage = function () {
-  var irl = _this.getIrl();
-  if (irl > 9) {
-    return "You are so ready for RL, but want to be 100% ready?";
-  } else if (irl > 6) {
-    return "Want help on how to improve your score?";
-  } else if (irl > 3) {
-    return "We know you can do better, let us help you!";
-  } else {
-    return "Girlfriend, we are here for you 💁🏻";
-  }
+var irl = _this.getIrl();
+if (irl > 9) {
+  return "You are so ready for RL, but want to be 100% ready?";
+} else if (irl > 6) {
+  return "Want help on how to improve your score?";
+} else if (irl > 3) {
+  return "We know you can do better, let us help you!";
+} else {
+  return "Girlfriend, we are here for you 💁🏻";
+}
 };
 
 _this.state = {
-  job: 0,
-  city: 0,
-  debt: 0,
-  pageNum: 0,
-  emailValid: false
+job: 0,
+city: 0,
+debt: 0,
+pageNum: 0,
+emailValid: false
 };
 return _this;
 }
@@ -1305,286 +1315,295 @@ StudentDebt.prototype.render = function render() {
 var _this2 = this;
 
 return React.createElement(
-  "div",
-  null,
+"div",
+null,
+React.createElement(
+  Slider,
+  { ref: "slider", afterChange: this.afterChange, arrows: false, swipe: false, infinite: false },
   React.createElement(
-    Slider,
-    { ref: "slider", afterChange: this.afterChange, arrows: false, swipe: false, infinite: false },
+    "div",
+    { className: "container" },
     React.createElement(
       "div",
-      { className: "container" },
+      { className: "intro first-intro" },
+      React.createElement("img", { src: "https://cdn.rawgit.com/allenpc/skylet-irl-assets/12b2acbd/SKYLETIRLLOGO.png" }),
       React.createElement(
-        "div",
-        { className: "intro first-intro" },
-        React.createElement("img", { src: "https://cdn.rawgit.com/allenpc/skylet-irl-assets/12b2acbd/SKYLETIRLLOGO.png" }),
+        "p",
+        { className: "big" },
+        "Think you know what real life is like?"
+      ),
+      React.createElement(
+        "p",
+        null,
+        "Get your IRL score today!"
+      )
+    ),
+    React.createElement(
+      Form,
+      { horizontal: true },
+      React.createElement(
+        FormGroup,
+        { className: "nopad" },
         React.createElement(
-          "p",
-          { className: "big" },
-          "Think you know what real life is like?"
-        ),
-        React.createElement(
-          "p",
-          null,
-          "Get your IRL score today!"
+          Col,
+          { xs: 12 },
+          React.createElement(
+            ControlLabel,
+            null,
+            "Total student loan debt"
+          )
         )
       ),
       React.createElement(
-        Form,
-        { horizontal: true },
+        FormGroup,
+        null,
         React.createElement(
-          FormGroup,
-          { className: "nopad" },
+          Col,
+          { xs: 12 },
+          React.createElement(FormControl, { pattern: "\\d*", onChange: this.changeDebt, tabIndex: this.state.pageNum === 0 ? 0 : -1, placeholder: "Enter $ Amount" })
+        )
+      ),
+      React.createElement(
+        FormGroup,
+        { className: "nopad" },
+        React.createElement(
+          Col,
+          { xs: 8 },
           React.createElement(
-            Col,
-            { xs: 12 },
+            ControlLabel,
+            null,
             React.createElement(
-              ControlLabel,
+              "div",
               null,
-              "Total student loan debt"
-            )
-          )
-        ),
-        React.createElement(
-          FormGroup,
-          null,
-          React.createElement(
-            Col,
-            { xs: 12 },
-            React.createElement(FormControl, { pattern: "\\d*", onChange: this.changeDebt, tabIndex: this.state.pageNum === 0 ? 0 : -1, placeholder: "Enter $ Amount" })
-          )
-        ),
-        React.createElement(
-          FormGroup,
-          { className: "nopad" },
-          React.createElement(
-            Col,
-            { xs: 8 },
-            React.createElement(
-              ControlLabel,
-              null,
-              React.createElement(
-                "div",
-                null,
-                "What job areas interest you?"
-              ),
-              React.createElement(
-                "div",
-                { className: "select-one" },
-                "(select one or select inspire me)"
-              )
-            )
-          ),
-          React.createElement(
-            Col,
-            { xs: 4, className: "inspire-me" },
-            React.createElement(
-              "a",
-              { href: "#", onClick: this.randomJob, tabIndex: this.state.pageNum === 0 ? 0 : -1 },
-              React.createElement("img", { src: "https://cdn.rawgit.com/allenpc/skylet-irl-assets/12b2acbd/Inspire_me_icon.png" })
-            )
-          )
-        ),
-        React.createElement(
-          FormGroup,
-          null,
-          React.createElement(
-            Col,
-            { xs: 12 },
-            React.createElement(
-              FormControl,
-              { componentClass: "select", onChange: this.changeJob, tabIndex: this.state.pageNum === 0 ? 0 : -1 },
-              this.props.jobs.map(function (job, i) {
-                return React.createElement(
-                  "option",
-                  { value: i, selected: i == _this2.state.job },
-                  job.field
-                );
-              })
+              "What job areas interest you?"
             ),
             React.createElement(
               "div",
-              { className: "jobs" },
-              React.createElement(
-                "div",
-                { className: "you-could-have" },
-                "Jobs you could have..."
-              ),
-              React.createElement(
-                "div",
-                { className: "job-values" },
-                this.props.jobs[this.state.job].jobs
-              )
+              { className: "select-one" },
+              "(select one or select inspire me)"
             )
           )
         ),
         React.createElement(
-          FormGroup,
-          { className: "nopad" },
+          Col,
+          { xs: 4, className: "inspire-me" },
           React.createElement(
-            Col,
-            { xs: 8 },
-            React.createElement(
-              ControlLabel,
-              null,
-              "Where do you want to live?"
-            )
+            "a",
+            { href: "#", onClick: this.randomJob, tabIndex: this.state.pageNum === 0 ? 0 : -1 },
+            React.createElement("img", { src: "https://cdn.rawgit.com/allenpc/skylet-irl-assets/12b2acbd/Inspire_me_icon.png" })
+          )
+        )
+      ),
+      React.createElement(
+        FormGroup,
+        null,
+        React.createElement(
+          Col,
+          { xs: 12 },
+          React.createElement(
+            FormControl,
+            { componentClass: "select", onChange: this.changeJob, tabIndex: this.state.pageNum === 0 ? 0 : -1 },
+            this.props.jobs.map(function (job, i) {
+              return React.createElement(
+                "option",
+                { value: i, selected: i == _this2.state.job },
+                job.field
+              );
+            })
           ),
           React.createElement(
-            Col,
-            { xs: 4, className: "inspire-me" },
+            "div",
+            { className: "jobs" },
             React.createElement(
-              "a",
-              { href: "#", onClick: this.randomCity, tabIndex: this.state.pageNum === 0 ? 0 : -1 },
-              React.createElement("img", { src: "https://cdn.rawgit.com/allenpc/skylet-irl-assets/12b2acbd/Inspire_me_icon.png" })
+              "div",
+              { className: "you-could-have" },
+              "Jobs you could have..."
+            ),
+            React.createElement(
+              "div",
+              { className: "job-values" },
+              this.props.jobs[this.state.job].jobs
             )
           )
-        ),
-        React.createElement(
-          FormGroup,
-          null,
-          React.createElement(
-            Col,
-            { xs: 12 },
-            React.createElement(
-              FormControl,
-              { componentClass: "select", onChange: this.changeCity, tabIndex: this.state.pageNum === 0 ? 0 : -1 },
-              this.props.cities.map(function (city, i) {
-                return React.createElement(
-                  "option",
-                  { value: i, selected: i == _this2.state.city },
-                  city.region
-                );
-              })
-            )
-          )
-        ),
-        React.createElement(
-          "div",
-          { className: "get-irl" },
-          React.createElement(
-            Button,
-            { bsStyle: "custom", onClick: this.goIrl, tabIndex: this.state.pageNum === 0 ? 0 : -1 },
-            "Get my IRL score!"
-          )
         )
-      )
-    ),
-    React.createElement(
-      "div",
-      { className: "container" },
-      React.createElement(
-        "div",
-        { className: "header" },
-        React.createElement("img", { src: "https://cdn.rawgit.com/allenpc/skylet-irl-assets/12b2acbd/SKYLETIRLLOGO.png" })
       ),
       React.createElement(
-        "div",
-        { className: "purple" },
+        FormGroup,
+        { className: "nopad" },
         React.createElement(
-          "div",
-          { className: "recap" },
-          this.props.jobs[this.state.job].field,
-          " + living in ",
-          this.props.cities[this.state.city].region
-        ),
-        React.createElement("img", { className: "cash", src: "https://cdn.rawgit.com/allenpc/skylet-irl-assets/59014499/Screen2icon.png" }),
-        React.createElement(
-          "p",
-          null,
-          "Starting Salary ",
+          Col,
+          { xs: 8 },
           React.createElement(
-            "span",
-            { className: "amount" },
-            numeral(this.props.jobs[this.state.job].salary).format('$0,0')
+            ControlLabel,
+            null,
+            "Where do you want to live?"
           )
         ),
         React.createElement(
-          "p",
-          null,
-          "Cost of Living ",
+          Col,
+          { xs: 4, className: "inspire-me" },
           React.createElement(
-            "span",
-            { className: "amount" },
-            numeral(this.getEffectiveCol()).format('$0,0')
+            "a",
+            { href: "#", onClick: this.randomCity, tabIndex: this.state.pageNum === 0 ? 0 : -1 },
+            React.createElement("img", { src: "https://cdn.rawgit.com/allenpc/skylet-irl-assets/12b2acbd/Inspire_me_icon.png" })
           )
         )
       ),
       React.createElement(
-        Form,
-        { horizontal: true, onSubmit: this.submitEmail, onBeforeUnload: null },
+        FormGroup,
+        null,
         React.createElement(
-          "div",
-          { className: "purple-header" },
-          "Get awesome ideas on how to live a cool real life!"
-        ),
-        React.createElement(
-          "p",
-          { className: "email-msg" },
-          "Enter your email for your IRL Score & to get access to cool stuff"
-        ),
-        React.createElement(
-          FormGroup,
-          null,
+          Col,
+          { xs: 12 },
           React.createElement(
-            Col,
-            { xs: 12 },
-            React.createElement("input", { className: "form-control", type: "email", placeholder: "Email Address", onChange: this.changeEmail, ref: "email", tabIndex: this.state.pageNum === 1 ? 0 : -1 })
-          )
-        ),
-        React.createElement(
-          "div",
-          { className: "get-irl" },
-          React.createElement(
-            Button,
-            { bsStyle: "custom", type: "submit", disabled: !this.state.emailValid, tabIndex: this.state.pageNum === 1 ? 0 : -1 },
-            "Ok, gimme my IRL score"
+            FormControl,
+            { componentClass: "select", onChange: this.changeCity, tabIndex: this.state.pageNum === 0 ? 0 : -1 },
+            this.props.cities.map(function (city, i) {
+              return React.createElement(
+                "option",
+                { value: i, selected: i == _this2.state.city },
+                city.region
+              );
+            })
           )
         )
-      )
-    ),
-    React.createElement(
-      "div",
-      { className: "container" },
-      React.createElement(
-        "div",
-        { className: "header" },
-        React.createElement("img", { src: "https://cdn.rawgit.com/allenpc/skylet-irl-assets/12b2acbd/SKYLETIRLLOGO.png" })
-      ),
-      React.createElement(
-        "div",
-        { className: "purple" },
-        React.createElement(
-          "div",
-          { className: "recap" },
-          "Your IRL score out of a possible 10 is..."
-        ),
-        React.createElement(
-          "div",
-          { className: "score" },
-          this.getIrl()
-        ),
-        React.createElement(
-          "div",
-          { className: "message" },
-          this.getMessage()
-        )
-      ),
-      React.createElement(
-        "div",
-        { className: "purple-header" },
-        this.getSecondaryMessage()
       ),
       React.createElement(
         "div",
         { className: "get-irl" },
         React.createElement(
           Button,
-          { bsStyle: "custom", tabIndex: this.state.pageNum === 2 ? 0 : -1, href: "http://www.skyletcampus.com/irl_signup.html", target: "_blank" },
-          "Join Skylet Campus Today!"
+          { bsStyle: "custom", onClick: this.goIrl, tabIndex: this.state.pageNum === 0 ? 0 : -1 },
+          "Get my IRL score!"
         )
       )
     )
+  ),
+  React.createElement(
+    "div",
+    { className: "container" },
+    React.createElement(
+      "div",
+      { className: "header" },
+      React.createElement("img", { src: "https://cdn.rawgit.com/allenpc/skylet-irl-assets/12b2acbd/SKYLETIRLLOGO.png" })
+    ),
+    React.createElement(
+      "div",
+      { className: "purple" },
+      React.createElement(
+        "div",
+        { className: "recap" },
+        this.props.jobs[this.state.job].field,
+        " + living in ",
+        this.props.cities[this.state.city].region
+      ),
+      React.createElement("img", { className: "cash", src: "https://cdn.rawgit.com/allenpc/skylet-irl-assets/59014499/Screen2icon.png" }),
+      React.createElement(
+        "p",
+        null,
+        "Starting Salary ",
+        React.createElement(
+          "span",
+          { className: "amount" },
+          numeral(this.props.jobs[this.state.job].salary).format('$0,0')
+        )
+      ),
+      React.createElement(
+        "p",
+        null,
+        "Cost of Living ",
+        React.createElement(
+          "span",
+          { className: "amount" },
+          numeral(this.getEffectiveCol()).format('$0,0')
+        )
+      )
+    ),
+    React.createElement(
+      Form,
+      { horizontal: true, onSubmit: this.submitEmail, onBeforeUnload: null },
+      React.createElement(
+        "div",
+        { className: "purple-header" },
+        "Get awesome ideas on how to live a cool real life!"
+      ),
+      React.createElement(
+        "p",
+        { className: "email-msg" },
+        "Enter your email for your IRL Score & to get access to cool stuff"
+      ),
+      React.createElement(
+        FormGroup,
+        null,
+        React.createElement(
+          Col,
+          { xs: 12 },
+          React.createElement("input", { className: "form-control", type: "email", placeholder: "Email Address", onChange: this.changeEmail, ref: "email", tabIndex: this.state.pageNum === 1 ? 0 : -1 })
+        )
+      ),
+      React.createElement(
+        "div",
+        { className: "get-irl" },
+        React.createElement(
+          Button,
+          { bsStyle: "custom", type: "submit", disabled: !this.state.emailValid, tabIndex: this.state.pageNum === 1 ? 0 : -1 },
+          "Ok, gimme my IRL score"
+        )
+      )
+    )
+  ),
+  React.createElement(
+    "div",
+    { className: "container" },
+    React.createElement(
+      "div",
+      { className: "header" },
+      React.createElement("img", { src: "https://cdn.rawgit.com/allenpc/skylet-irl-assets/12b2acbd/SKYLETIRLLOGO.png" })
+    ),
+    React.createElement(
+      "div",
+      { className: "purple" },
+      React.createElement(
+        "div",
+        { className: "recap" },
+        "Your IRL score out of a possible 10 is..."
+      ),
+      React.createElement(
+        "div",
+        { className: "score" },
+        this.getIrl()
+      ),
+      React.createElement(
+        "div",
+        { className: "message" },
+        this.getMessage()
+      )
+    ),
+    React.createElement(
+      "div",
+      { className: "purple-header" },
+      this.getSecondaryMessage()
+    ),
+    React.createElement(
+      "div",
+      { className: "get-irl" },
+      React.createElement(
+        Button,
+        { bsStyle: "custom", tabIndex: this.state.pageNum === 2 ? 0 : -1, href: "http://www.skyletcampus.com/irl_signup.html", target: "_blank" },
+        "Join Skylet Campus Today!"
+      )
+    ),
+    React.createElement(
+      "div",
+      { className: "how" },
+      React.createElement(
+        "a",
+        { href: "http://www.skyletcampus.com/irldeets.html", target: "_blank" },
+        "How is my IRL score calculated?"
+      )
+    )
   )
+)
 );
 };
 
